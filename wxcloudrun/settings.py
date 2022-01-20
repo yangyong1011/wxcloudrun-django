@@ -67,6 +67,14 @@ WSGI_APPLICATION = 'wxcloudrun.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
+
+'''
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ.get("MYSQL_DATABASE", 'django_demo'),
         'USER': os.environ.get("MYSQL_USERNAME"),
@@ -76,6 +84,8 @@ DATABASES = {
         'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
+'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
